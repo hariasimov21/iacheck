@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iacheck"
+version = "1.0.0"
+description = "Estima qué modelos de IA de Hugging Face puede correr tu equipo localmente"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "hariasimov21" }]
+dependencies = ["textual>=1.0"]
+
+[project.urls]
+Homepage = "https://github.com/hariasimov21/iacheck"
+
+[project.optional-dependencies]
+precise = ["psutil"]
+
+[project.scripts]
+iacheck = "iacheck:main"
+
+[tool.setuptools]
+py-modules = ["iacheck", "iacheck_tui"]

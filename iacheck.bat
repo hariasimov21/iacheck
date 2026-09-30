@@ -1,0 +1,3 @@
+@echo off
+REM Lanzador para Windows: iacheck [scan|search|check|specs] ...
+where py >nul 2>nul && (py -3 "%~dp0iacheck.py" %*) || (python "%~dp0iacheck.py" %*)
